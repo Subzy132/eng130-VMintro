@@ -106,6 +106,4 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
 - used `vagrant ssh` to get back in
 - if `vagrant reload`doesn't work then try `vagrant destroy`  and then `vagrant up`
 
-![alt text]([paste link here](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-18%20at%2016.02.08.png))
-
-
+![alt text](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-18%20at%2016.02.08.png)
