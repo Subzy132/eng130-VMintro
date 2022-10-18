@@ -74,12 +74,12 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
 - How to navigate back/out `cd ..` or `cd` Enter
 - How to delete a file/folder `rm -rf file/foldername`
 - `cp [...file/directory-sources] [destination]` to copy file to a specific destination
-- for Admin access `sudp` switch to admin user `sudo su`
+- for Admin access `sudo` switch to admin user `sudo su`
 - to check properties of files `ls -l` or `ll` which lists all hidden files 
 - to change permission `chmod instruction file-name` i.e `chmod 700 test.txt`
 - Currently running process `top` & `ps aux`
 - To remove any process `kill PID` - Kill {processID} - `kill 7`
-- How to delete folder/hidden folder `ls -a` to see all hidden folders 
+- How to delete folder/hidden folder `ls -a` to see all hidden folders `rm -`
 - To print specific lines from a text file use `sed` for example `sed -n '1,10p' test.txt` this will print the first 10 lines
 - to print from the top you would use `head -n [value] filename`
 - to print from the bottom you would use `tail -n [value] filename`
@@ -105,4 +105,7 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
 - then done `vagrant reload` on local host terminal
 - used `vagrant ssh` to get back in
 - if `vagrant reload`doesn't work then try `vagrant destroy`  and then `vagrant up`
+
+![alt text]([paste link here](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-18%20at%2016.02.08.png))
+
 
