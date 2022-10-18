@@ -88,12 +88,6 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
      - for example `grep [string][filename]`
 - sort will print the output of a file in given order
      - for example `sort [filename]` 
-- i
-- i
-- i
-- i
-- i
-- i
 - install `nginx` in our VM
 - create a `private-network` between localhost & vm
 - allocate an IP address - for mac users copy and paste the one given
@@ -107,3 +101,31 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
 - if `vagrant reload`doesn't work then try `vagrant destroy`  and then `vagrant up`
 
 ![alt text](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-18%20at%2016.02.08.png)
+
+## What is Virtualisation
+
+virtualisation is the process of running a virtual instance of a computer system. So you are essentially running another operating system that has no interferance with your own one. 
+
+To the applications running on top of the virtualized machine, it can appear as if they are on their own dedicated machine, where the operating system, libraries, and other programs are unique to the guest virtualized system and unconnected to the host operating system which sits below it.
+
+## What is dev env
+
+It stands for development environment. it is essentially a workspace which allows a developer or someone to to run process and programming tools to develop code for an application or software product. 
+
+So it will have everything the person needs to develop an application. it will have all the tool adn services needed. Allowing them to be as efficient as possible. 
+
+## What is Vagrant
+
+
+Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past
+
+
+## what is Virtual box
+
+oracle VM VirtualBox is cross-platform virtualization software. It allows users to extend their existing computer to run multiple operating systems including Microsoft Windows, Mac OS X, Linux, and Oracle Solaris, at the same time.
+
+## why should wwe use all of them
+
+Building a software prototyping environment (aka lab) is far simpler than ever before. No longer do you have to wait to build a physical machine, then wait to download ISO images of the virtualization stuff, operating systems, software packages etc.
+
+Simply use Vagrant and VirtualBox together. You'll have a highly functional lab for software development up fast with some added agility for prototyping infrastructure choices too.
