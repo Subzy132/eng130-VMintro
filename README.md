@@ -93,7 +93,7 @@ https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/
 - allocate an IP address - for mac users copy and paste the one given
 - `sudo apt-get install nginx -y`
 - how to check a tool/software status in linux `sudo systemctl status [name]`
-- how to restart a process in Linux `sudo systemctl start [name]`, `sudo systemctl stop [name]` `sudo systemctl start [name]`
+- how to restart a process in Linux `sudo systemctl start [name]`, `sudo systemctl stop [name]` `sudo systemctl restart [name]`
 - need to put private network in vagrant file
 - added `config.vm.network "private_network", ip: "192.168.56.0"` to vagrant file
 - then done `vagrant reload` on local host terminal
@@ -128,4 +128,5 @@ oracle VM VirtualBox is cross-platform virtualization software. It allows users 
 
 Building a software prototyping environment (aka lab) is far simpler than ever before. No longer do you have to wait to build a physical machine, then wait to download ISO images of the virtualization stuff, operating systems, software packages etc.
 
-Simply use Vagrant and VirtualBox together. You'll have a highly functional lab for software development up fast with some added agility for prototyping infrastructure choices too.
+Simply use Vagrant and VirtualBox together. You'll have a highly functional lab for software development up fast with some added agility for prototyping infrastructure choices too. 
+
