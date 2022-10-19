@@ -39,10 +39,9 @@
 ## How to install node js
 
 1. on VM run the following commands
-   1.  `sudo apt-get purge nodejs npm`
-   2.  `sudo apt-get install python-software-properties`
-   3.  `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
-   4.  `sudo apt-get install -y nodejs`
+   1.  `sudo apt-get install python-software-properties`
+   2.  `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+   3.  `sudo apt-get install -y nodejs`
 2. then to check nodejs version. run `nodejs -v`
 
 ## How to install pm2 and run app
@@ -55,3 +54,42 @@
 6. go onto the browser and enter the IP. My one is `http://192.168.56.12:3000`
 
 ![alt text](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-19%20at%2014.30.26.png)
+
+## How to allow provisons to run when vagrant starts
+
+1. create a `provison.sh`
+2. add all the script into there 
+```bash
+    #!/bin/bash
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo apt-get install python -y
+# install nodejs
+sudo apt-get install python-software-properties
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs -y
+
+# install pm2
+sudo npm install pm2 -g
+
+# go into into app folder
+
+cd app
+cd app
+
+# run npm
+
+npm install
+
+```
+
+3. add that file on the local host where the vagrantfile is saved 
+4. open up `Vagrantfile`
+5. And add the following command `config.vm.provision "shell", path: "provision.sh"`
+6. Go back into the OS and run `vagrant destroy`
+7. If that's working run `vagrant up`
+8. now going into the VM using `vagrant ssh` this all should be running
