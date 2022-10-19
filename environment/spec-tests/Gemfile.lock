@@ -37,6 +37,7 @@ GEM
       sfl
 
 PLATFORMS
+  universal-darwin-21
   x64-mingw32
 
 DEPENDENCIES
@@ -44,4 +45,4 @@ DEPENDENCIES
   serverspec
 
 BUNDLED WITH
-   2.2.31
+   2.3.24
