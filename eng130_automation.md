@@ -53,3 +53,5 @@
 4. run `npm start`
 5. You should see a prompt that it's working
 6. go onto the browser and enter the IP. My one is `http://192.168.56.12:3000`
+
+![alt text](https://github.com/Subzy132/eng130-VMintro/blob/main/images/Screenshot%202022-10-19%20at%2014.30.26.png)
