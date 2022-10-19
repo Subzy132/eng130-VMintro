@@ -15,7 +15,9 @@
    ```
 6. change the port number to 3000
 7. save the file
-8. `cd` your way back into the app folder and run
+8. run `sudo nginx -t` to check if the syntax is correct
+9. run `sudo systemctl restart nginx` to restart the nginx
+10. `cd` your way back into the app folder and run
    1. `npm install`
    2. `npm start`
-9. after getting the prompt that the app is running you can now visit the website without the 3000
+11. after getting the prompt that the app is running you can now visit the website without the 3000
