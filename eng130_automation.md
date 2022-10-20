@@ -40,7 +40,7 @@
 
 1. on VM run the following commands
    1.  `sudo apt-get install python-software-properties`
-   2.  `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+   2.  `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
    3.  `sudo apt-get install -y nodejs`
 2. then to check nodejs version. run `nodejs -v`
 
@@ -93,3 +93,4 @@ npm install
 6. Go back into the OS and run `vagrant destroy`
 7. If that's working run `vagrant up`
 8. now going into the VM using `vagrant ssh` this all should be running
+

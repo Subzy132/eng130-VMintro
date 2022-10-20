@@ -130,3 +130,50 @@ Building a software prototyping environment (aka lab) is far simpler than ever b
 
 Simply use Vagrant and VirtualBox together. You'll have a highly functional lab for software development up fast with some added agility for prototyping infrastructure choices too. 
 
+## Linux Environment Variable
+
+- Syntax `NAME=SUBHAAN`(normal variable)
+- How to check existing env var `env`
+- `export` to create env var
+- export DB_HOST=DB-IP:27017
+
+
+step 1 create 2 VMs - 1.1 set up app in app machine - 1.2 install mongodb in db machine
+step 2 install required version of mongodb with valid key
+step 3 ensure it's running - 3.1 change mongod.conf file to allow access to everyone
+step 4 restart mongodb `sudo systemctl restart mongodb` then enable then check status to ensure it's running with new config. `cat mongodb.conf`
+
+back to app machine to create env var called `DB_HOST="MONGODB//192.168.33.150:27017/posts"`
+
+ be careful of these keys, they will go out of date
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+``#sudo apt-get install mongodb-org=3.2.20 -y``
+sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+
+`sudo systemctl status mongod`
+`sudo systemctl restart mongod`
+`sudo systemctl enable mongod`
+`sudo systemctl status mongod`
+
+## change the mongod.conf 
+cd into `cd /etc`
+`sudo nano mongod.conf`
+need to change bindip to 0.0.0.0
+
+```
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+```
+
+- Back to app machine
+- create an env var called DB_HOST=mongodb://192.168.10.13:27017/posts
+- printenv DB_HOST
+- nano ~/.bashrc
+- DB_HOST=mongodb://192.168.10.13:27017/
+- 
