@@ -175,5 +175,5 @@ net:
 - create an env var called DB_HOST=mongodb://192.168.10.13:27017/posts
 - printenv DB_HOST
 - nano ~/.bashrc
-- DB_HOST=mongodb://192.168.10.13:27017/
+- DB_HOST=mongodb://192.168.10.13:27017/posts
 - 
